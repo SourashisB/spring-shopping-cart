@@ -1,4 +1,4 @@
-package main.java.com.springshopping.controllers;
+package com.springshopping.controllers;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import main.java.com.springshopping.service.OrderService;
+import com.springshopping.service.OrderService;
 import com.springshopping.entities.Order;
 import com.springshopping.entities.OrderStatus;
 

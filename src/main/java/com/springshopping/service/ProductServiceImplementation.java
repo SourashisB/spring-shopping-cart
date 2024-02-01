@@ -1,9 +1,9 @@
-package main.java.com.springshopping.service;
+package com.springshopping.service;
 
 import com.springshopping.entities.Product;
 
-import main.java.com.springshopping.repositories.ProductRepository;
-import main.java.com.springshopping.service.ProductService;
+import com.springshopping.repositories.ProductRepository;
+import com.springshopping.service.ProductService;
 
 import java.util.List;
 import java.util.Optional;
@@ -34,6 +34,11 @@ public class ProductServiceImplementation implements ProductService {
     }
 
     @Override
+    public List<Product> getProductsByName(String name) {
+        return productRepository.findByName(name);
+    }
+
+    @Override
     public List<Product> getAllProducts() {
         return productRepository.findAll();
     }
@@ -58,10 +63,19 @@ public class ProductServiceImplementation implements ProductService {
         productRepository.deleteById(id);
     }
 
-    public List<Product> getProductsByName(String name) {
-        // This method should interact with the repository to find products with the given name.
-        // The actual implementation depends on your data access layer.
-        // For example, if you are using Spring Data JPA, it might look like this:
-        return productRepository.findByNameContainingIgnoreCase(name);
+    @Override
+    public Product createOrUpdateProduct(Product product) {
+        // Check if product already exists
+        // If it does, update it
+        // If not, save (create) it as a new product
+        // Assuming Product has an id attribute that is used to check its existence
+        if (productRepository.existsById(product.getId())) {
+            // Update existing product
+            // You could add more logic here to handle updates specifically
+        }
+        // Create new or update existing product
+        return productRepository.save(product);
     }
+
+
 }

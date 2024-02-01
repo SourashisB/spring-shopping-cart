@@ -1,4 +1,4 @@
-package main.java.com.springshopping.service;
+package com.springshopping.service;
 
 import com.springshopping.entities.Order;
 import com.springshopping.entities.OrderStatus;
@@ -14,5 +14,5 @@ public interface OrderService {
     Order updateOrder(Long id, Order order);
     void deleteOrder(Long id);
     List<Order> getOrdersByStatus(OrderStatus status);
-
+    Order createOrUpdateOrder(Order order);
 }

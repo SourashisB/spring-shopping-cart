@@ -1,7 +1,7 @@
-package main.java.com.springshopping.service;
+package com.springshopping.service;
 
-import main.java.com.springshopping.repositories.OrderRepository;
-import main.java.com.springshopping.service.OrderService;
+import com.springshopping.repositories.OrderRepository;
+import com.springshopping.service.OrderService;
 import com.springshopping.entities.Order;
 import com.springshopping.entities.OrderStatus;
 
@@ -63,6 +63,11 @@ public class OrderServiceImplementation implements OrderService{
     @Override
     public List<Order> getOrdersByStatus(OrderStatus status) {
         return orderRepository.findByStatus(status);
+    }
+
+    @Override
+    public Order createOrUpdateOrder(Order order) {
+        return order;
     }
     
 }

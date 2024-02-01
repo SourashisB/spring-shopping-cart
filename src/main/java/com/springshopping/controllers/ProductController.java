@@ -1,9 +1,13 @@
-package main.java.com.springshopping.controllers;
+package com.springshopping.controllers;
 
 import java.util.List;
 
 import com.springshopping.entities.Product;
-import main.java.com.springshopping.service.ProductService;
+import com.springshopping.service.ProductService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/products")

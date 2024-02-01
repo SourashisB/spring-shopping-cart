@@ -33,7 +33,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
@@ -54,11 +53,11 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
+		<!--<dependency>
     		<groupId>org.hibernate</groupId>
     		<artifactId>hibernate-core</artifactId>
-    		<version>5.2.2.Final</version>
-		</dependency>
+    		<version>6.4.1.Final</version>
+		</dependency>-->
 	</dependencies>
 
 	<build>

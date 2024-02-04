@@ -1,10 +1,8 @@
 package com.springshopping.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.math.BigDecimal;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.*;
+
 
 @Entity
 @Table(name = "products")
@@ -12,7 +10,7 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @Column(nullable = false)
     private String name;
@@ -24,6 +22,13 @@ public class Product {
     private BigDecimal price;
     
     private String imageUrl;
+
+    public Product(Long id, String name, String description, BigDecimal price){
+        this.name = name;
+        this.id = id;
+        this.description = description;
+        this.price = price;
+    }
 
     public long getId() {
         return this.id;

@@ -1,5 +1,6 @@
 package com.springshopping.entities;
-import javax.persistence.*;
+
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "order_items")

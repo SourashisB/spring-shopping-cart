@@ -8,6 +8,7 @@ public class SpringEcommerceWebsiteApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringEcommerceWebsiteApplication.class, args);
+
 	}
 
 }

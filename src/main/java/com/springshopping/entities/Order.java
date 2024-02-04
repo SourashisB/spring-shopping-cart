@@ -1,6 +1,6 @@
 package com.springshopping.entities;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.util.Date;
 import java.util.List;
 import com.springshopping.entities.OrderItem;
